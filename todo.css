@@ -1,0 +1,175 @@
+* {
+	font-family: "Verdana", "Geneva", sans-serif;
+	background-color: rgb(128,204,255);
+}
+a:hover {
+	background-color: red;
+}
+
+a img {
+	border: none;
+}
+
+h1 {
+	margin-top: 0em;
+	padding-left:9em;
+	padding-top:2em;
+	color:white;
+	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+h2 {
+	margin-top: 0em;
+	padding-left:12em;
+	padding-top:2em;
+	color:red;
+	text-shadow: 2px 2px black;
+}
+
+a {
+	color: blue;
+	text-decoration: none;
+}
+
+
+body {
+	padding-left: 1em;
+}
+
+body > div, form {
+	overflow: hidden;
+	max-width: 100% ;
+}
+
+div {
+	overflow: hidden;
+}
+
+/* form styles */
+
+
+
+
+input[type="submit"] {
+	background-color: #191970;
+	color: white;
+	font-weight: bold;
+}
+
+
+
+
+
+
+.list h2{
+	padding-left:0em;
+	color:white;
+	background-color:#f44336;
+	text-shadow:none;
+}
+
+.list{
+	width: 70%;
+	border: solid black;
+	padding: 25px;
+	margin-left:10em;
+	margin-top:25px;
+	background:#f44336;
+	text-align:center;
+}
+
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 70%;
+  padding: 15px;
+  float: left;
+  font-size: 16px;
+  background-color:white;
+}
+.add{
+  padding: 15px;
+  width: 20%;
+  background: #d9d9d9;
+  color: black;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 0;
+}
+table{
+	border-collapse:collapse;
+	padding: 25px;
+	margin-left:10em;
+	margin-top:25px;
+	width: 70%;
+}
+table,th,td{
+	border: 1px solid black;
+	text-align:center;
+	background: #f44336;
+}
+th{
+	color:white;
+}
+td{
+	color:white;
+}
+ul li:nth-child(odd) {
+  background:#a6a6a6 ;
+}
+ul li:nth-child(odd) {
+  background:#a6a6a6 ;
+}
+
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+ul li {
+  list-style-type:none;
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  margin-left:6em;
+  background: white;
+  font-size: 18px;
+  width:75%;
+}
+#menu ul li {
+  list-style-type:none;
+  background:rgb(128,204,255);
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  margin-left:6em;
+  font-size: 18px;
+  width:75%;
+}
+ul li span{
+	position: absolute;
+	right: 0;
+	top: 0;
+	background:#cccccc;
+}
+ul li span:hover{
+	background-color: red;
+	color: white;
+}
+ul li:hover {
+  background: #ddd;
+}
