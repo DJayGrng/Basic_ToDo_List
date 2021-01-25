@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>To-Do List</title>
+		<link href="todo.css" type="text/css" rel="stylesheet" />
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	</head>
+	<body>
+		<div class="list">
+			<h2> You Need To Complete These:</h2>
+		</div>
+		
+		<div ng-app="myApp" ng-controller="customersCtrl">
+		<ul>
+			<li ng-repeat="x in names" ng-click="myFunc()">
+				{{x.Title}}
+				 
+			</li>
+		</ul>
+		</div>
+		<div id="menu">
+	<ul>
+		<li>
+			<a href="add.html">
+			<img src="Images/todo.jpg"></img>
+				Add A New To-Do
+			</a>
+		</li>
+		<br><br>
+		<li>
+			<a href="todo.html">
+			<img src="Images/home.jpg"></img>
+				Go Back To Home Page
+			</a>
+		</li>
+		</div>
+		<script>
+			var app = angular.module('myApp', []);
+				app.controller('customersCtrl', function($scope, $http) 
+				{
+					$http.get("existing.php")
+					.then(function (response) {$scope.names = response.data.records;});
+					$scope.count = 0;
+					$scope.myFunction = function() {
+        $scope.count++;
+    }
+				});
+		</script>
+	</body>
+</html>
