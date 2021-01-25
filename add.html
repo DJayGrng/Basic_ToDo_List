@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>To-Do List</title>
+		<link href="todo.css" type="text/css" rel="stylesheet" />
+		<script src="todo.js" type="text/javascript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	</head>
+	<body>
+	<form action="http://localhost/FinalProject/todo_submit.php" method="get">
+		<div class="list">
+			<h2>Add What To-Do</h2>
+			<input type="text" name="title" placeholder="Add a To-Do...">
+			<input type="submit" value="Add" class="add"></span>
+		</div>
+		
+		<div ng-app="myApp" ng-controller="customersCtrl">
+		<table>				
+				<th>Existing To-Do Lists</th>
+			<tr ng-repeat="x in names">
+				<td>{{x.Title}}</td>
+			</tr>
+		</table>
+		</div>
+		<script>
+			var app = angular.module('myApp', []);
+				app.controller('customersCtrl', function($scope, $http) 
+				{
+					$http.get("existing.php")
+					.then(function (response) {$scope.names = response.data.records;});
+				});
+		</script>
+		</form>
+	</body>
+</html>
